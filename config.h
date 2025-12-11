@@ -69,7 +69,7 @@ If more than 3 axes are configured a compliant driver and board map file is need
 \brief Defines string to be output as part of the `$I` or `$I+` command response.
 */
 #if !defined BUILD_INFO || defined __DOXYGEN__
-#define BUILD_INFO ""
+#define BUILD_INFO "E2D-Strom_ESP32"
 #endif
 
 /*! \def COMPATIBILITY_LEVEL
@@ -87,7 +87,7 @@ settings disabled by setting level > 1.
 __NOTE:__ if switching to a level > 1 please reset non-volatile storage with `$RST=*` after reflashing!
 */
 #if !defined COMPATIBILITY_LEVEL || defined __DOXYGEN__
-#define COMPATIBILITY_LEVEL 0
+#define COMPATIBILITY_LEVEL 1
 #endif
 
 /*! \def ENABLE_SPINDLE_LINEARIZATION
@@ -1003,7 +1003,7 @@ are used the logic of the input signals should be be inverted with the \ref axis
 */
 ///@{
 #if !defined DEFAULT_LIMIT_SIGNALS_INVERT_MASK || defined __DOXYGEN__
-#define DEFAULT_LIMIT_SIGNALS_INVERT_MASK 0 // Set to -1 or AXES_BITMASK to invert for all axes
+#define DEFAULT_LIMIT_SIGNALS_INVERT_MASK -1 // Set to -1 or AXES_BITMASK to invert for all axes
 #endif
 ///@}
 
@@ -1023,7 +1023,7 @@ be now connect to Vcc instead of ground.
 */
 ///@{
 #if !defined DEFAULT_SOFT_LIMIT_ENABLE || defined __DOXYGEN__
-#define DEFAULT_SOFT_LIMIT_ENABLE Off
+#define DEFAULT_SOFT_LIMIT_ENABLE On
 #endif
 ///@}
 
@@ -1038,7 +1038,7 @@ simply message the user to check the limits and enter an alarm state, rather tha
 not throw an alarm message.
 */
 #if !defined DEFAULT_HARD_LIMIT_ENABLE || defined __DOXYGEN__
-#define DEFAULT_HARD_LIMIT_ENABLE Off
+#define DEFAULT_HARD_LIMIT_ENABLE On
 #endif
 #if !defined DEFAULT_CHECK_LIMITS_AT_INIT || defined __DOXYGEN__
 #define DEFAULT_CHECK_LIMITS_AT_INIT Off
@@ -1139,7 +1139,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MAX || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MAX 1000.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MAX 12000.0f // rpm
 #endif
 ///@}
 
@@ -1147,7 +1147,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MIN || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MIN 0.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MIN 1000.0f // rpm
 #endif
 ///@}
 
@@ -1476,7 +1476,7 @@ Requires homing cycles to be defined by \ref DEFAULT_HOMING_CYCLE_0 - \ref DEFAU
 \internal Bit 0 in settings.homing.flags.
 */
 #if !defined DEFAULT_HOMING_ENABLE || defined __DOXYGEN__
-#define DEFAULT_HOMING_ENABLE Off // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_HOMING_ENABLE On // Default disabled. Set to \ref On or 1 to enable.
 #endif
 
 /*! /def DEFAULT_HOMING_SINGLE_AXIS_COMMANDS
@@ -1715,7 +1715,7 @@ are used the logic of the input signals should be be inverted with the \ref axis
 */
 ///@{
 #if !defined DEFAULT_PROBE_SIGNAL_INVERT || defined __DOXYGEN__
-#define DEFAULT_PROBE_SIGNAL_INVERT Off
+#define DEFAULT_PROBE_SIGNAL_INVERT On
 #endif
 #if !defined DEFAULT_TOOLSETTER_SIGNAL_INVERT || defined __DOXYGEN__
 #define DEFAULT_TOOLSETTER_SIGNAL_INVERT Off
@@ -2169,13 +2169,13 @@ Adds directory entries in $F and $F+ output to allow hierarchical navigation of 
  */
 ///@{
 #if !defined DEFAULT_X_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_X_STEPS_PER_MM 250.0f
+#define DEFAULT_X_STEPS_PER_MM 1600.0f
 #endif
 #if !defined DEFAULT_Y_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_Y_STEPS_PER_MM 250.0f
+#define DEFAULT_Y_STEPS_PER_MM 1600.0f
 #endif
 #if !defined DEFAULT_Z_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_Z_STEPS_PER_MM 250.0f
+#define DEFAULT_Z_STEPS_PER_MM 1600.0f
 #endif
 #if (defined A_AXIS && !defined DEFAULT_A_STEPS_PER_MM) || defined __DOXYGEN__
 #define DEFAULT_A_STEPS_PER_MM 250.0f
@@ -2287,13 +2287,13 @@ __NOTE:__ Must be a positive values.
 */
 ///@{
 #if !defined DEFAULT_X_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_X_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_X_MAX_TRAVEL 234.0f // mm
 #endif
 #if !defined DEFAULT_Y_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_Y_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_Y_MAX_TRAVEL 196.0f // mm
 #endif
 #if !defined DEFAULT_Z_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_Z_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_Z_MAX_TRAVEL 72.0f // mm
 #endif
 #if (defined A_AXIS && !defined DEFAULT_A_MAX_TRAVEL) || defined __DOXYGEN__
 #define DEFAULT_A_MAX_TRAVEL 200.0f // mm
