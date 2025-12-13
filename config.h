@@ -87,7 +87,7 @@ settings disabled by setting level > 1.
 __NOTE:__ if switching to a level > 1 please reset non-volatile storage with `$RST=*` after reflashing!
 */
 #if !defined COMPATIBILITY_LEVEL || defined __DOXYGEN__
-#define COMPATIBILITY_LEVEL 1
+#define COMPATIBILITY_LEVEL 0
 #endif
 
 /*! \def ENABLE_SPINDLE_LINEARIZATION
@@ -817,7 +817,7 @@ allowing their use from manual input, eg. from a terminal or MDI.
 */
 ///@{
 #if !defined DEFAULT_SLEEP_ENABLE || defined __DOXYGEN__
-#define DEFAULT_SLEEP_ENABLE Off
+#define DEFAULT_SLEEP_ENABLE On
 #endif
 ///@}
 
@@ -1092,7 +1092,7 @@ Useful for some pre-built electronic boards.
 */
 ///@{
 #if !defined DEFAULT_INVERT_COOLANT_FLOOD_PIN || defined __DOXYGEN__
-#define DEFAULT_INVERT_COOLANT_FLOOD_PIN Off
+#define DEFAULT_INVERT_COOLANT_FLOOD_PIN On
 #endif
 #if !defined DEFAULT_INVERT_COOLANT_MIST_PIN || defined __DOXYGEN__
 #define DEFAULT_INVERT_COOLANT_MIST_PIN Off  // NOTE: not supported by all drivers.
