@@ -451,7 +451,7 @@ cases where these commands may be undesirable. Simply change desired macro to \r
 #define SETTINGS_RESTORE_PARAMETERS On //!< Default enabled. Set to \ref Off or 0 to disable.
 #endif
 #if !defined SETTINGS_RESTORE_STARTUP_LINES || defined __DOXYGEN__
-#define SETTINGS_RESTORE_STARTUP_LINES On //!< Default enabled. Set to \ref Off or 0 to disable.
+#define SETTINGS_RESTORE_STARTUP_LINES Off //!< Disable so $RST=* does not clear startup lines.
 #endif
 #if !defined SETTINGS_RESTORE_BUILD_INFO || defined __DOXYGEN__
 #define SETTINGS_RESTORE_BUILD_INFO  On //!< Default enabled. Set to \ref Off or 0 to disable.
