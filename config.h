@@ -69,7 +69,7 @@ If more than 3 axes are configured a compliant driver and board map file is need
 \brief Defines string to be output as part of the `$I` or `$I+` command response.
 */
 #if !defined BUILD_INFO || defined __DOXYGEN__
-#define BUILD_INFO "E2D-Strom_TinyBee"
+#define BUILD_INFO "E2D-Strom_DLC32_V2P1"
 #endif
 
 /*! \def COMPATIBILITY_LEVEL
@@ -1092,7 +1092,7 @@ Useful for some pre-built electronic boards.
 */
 ///@{
 #if !defined DEFAULT_INVERT_COOLANT_FLOOD_PIN || defined __DOXYGEN__
-#define DEFAULT_INVERT_COOLANT_FLOOD_PIN Off
+#define DEFAULT_INVERT_COOLANT_FLOOD_PIN On
 #endif
 #if !defined DEFAULT_INVERT_COOLANT_MIST_PIN || defined __DOXYGEN__
 #define DEFAULT_INVERT_COOLANT_MIST_PIN Off  // NOTE: not supported by all drivers.
