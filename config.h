@@ -2148,7 +2148,7 @@ Filing systems options.
 \internal Bit 1 in settings.fs_options.mask.
 */
 #if !defined DEFAULT_FS_LITLLEFS_HIDDEN || defined __DOXYGEN__
-#define DEFAULT_FS_LITLLEFS_HIDDEN On // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_FS_LITLLEFS_HIDDEN Off // Default disabled. Set to \ref On or 1 to enable.
 #endif
 
 /*! /def DEFAULT_FS_HIERACHICAL_LISTING
