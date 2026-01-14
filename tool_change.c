@@ -145,7 +145,7 @@ static bool restore (void)
     plan_data_init(&plan_data);
     plan_data.condition.rapid_motion = On;
 
-    // Always move Z to home position first (unless full restore is disabled)
+    // Always move Z to home position first
     target.values[plane.axis_linear] = sys.home_position[plane.axis_linear];
     ok = mc_line(target.values, &plan_data);
 
