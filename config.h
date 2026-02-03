@@ -1128,7 +1128,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 #define DEFAULT_INVERT_SPINDLE_ENABLE_PIN Off
 #endif
 #if !defined DEFAULT_INVERT_SPINDLE_CCW_PIN || defined __DOXYGEN__
-#define DEFAULT_INVERT_SPINDLE_CCW_PIN Off // NOTE: not supported by all drivers.
+#define DEFAULT_INVERT_SPINDLE_CCW_PIN On // NOTE: not supported by all drivers.
 #endif
 #if !defined DEFAULT_INVERT_SPINDLE_PWM_PIN || defined __DOXYGEN__
 #define DEFAULT_INVERT_SPINDLE_PWM_PIN Off // NOTE: not supported by all drivers.
