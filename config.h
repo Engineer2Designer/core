@@ -76,7 +76,7 @@ If more than 3 axes are configured a compliant driver and board map file is need
 \brief Defines string to be output as part of the `$I` or `$I+` command response.
 */
 #if !defined BUILD_INFO || defined __DOXYGEN__
-#define BUILD_INFO ""
+#define BUILD_INFO "E2D-Strom_DLC32_V2P1"
 #endif
 
 /*! \def COMPATIBILITY_LEVEL
@@ -284,7 +284,7 @@ the negative direction. In other words, a positive tool length offset value is s
 from the current location.
 */
 #if !defined TOOL_LENGTH_OFFSET_AXIS || defined __DOXYGEN__
-#define TOOL_LENGTH_OFFSET_AXIS -1 // Default is all axes.
+#define TOOL_LENGTH_OFFSET_AXIS  Z_AXIS// Default is all axes.
 #endif
 
 /*! \def MINIMUM_JUNCTION_SPEED
@@ -528,7 +528,7 @@ by a driver or a plugin.
 Number of tools in tool table, edit to enable (max. 32 allowed)
 */
 #if !defined N_TOOLS || defined __DOXYGEN__
-#define N_TOOLS 0
+#define N_TOOLS 6
 #endif
 #endif
 
@@ -824,7 +824,7 @@ allowing their use from manual input, eg. from a terminal or MDI.
 */
 ///@{
 #if !defined DEFAULT_SLEEP_ENABLE || defined __DOXYGEN__
-#define DEFAULT_SLEEP_ENABLE Off
+#define DEFAULT_SLEEP_ENABLE On
 #endif
 ///@}
 
@@ -976,7 +976,7 @@ normally-open (NO) switches on the specified pins, rather than the default norma
 */
 ///@{
 #if !defined DEFAULT_CONTROL_SIGNALS_INVERT_MASK || defined __DOXYGEN__
-#define DEFAULT_CONTROL_SIGNALS_INVERT_MASK 0 // Set to SIGNALS_BITMASK or -1 to invert all signals
+#define DEFAULT_CONTROL_SIGNALS_INVERT_MASK 6 // Set to SIGNALS_BITMASK or -1 to invert all signals
 #endif
 ///@}
 
@@ -1010,7 +1010,7 @@ are used the logic of the input signals should be be inverted with the \ref axis
 */
 ///@{
 #if !defined DEFAULT_LIMIT_SIGNALS_INVERT_MASK || defined __DOXYGEN__
-#define DEFAULT_LIMIT_SIGNALS_INVERT_MASK 0 // Set to -1 or AXES_BITMASK to invert for all axes
+#define DEFAULT_LIMIT_SIGNALS_INVERT_MASK -1 // Set to -1 or AXES_BITMASK to invert for all axes
 #endif
 ///@}
 
@@ -1030,7 +1030,7 @@ be now connect to Vcc instead of ground.
 */
 ///@{
 #if !defined DEFAULT_SOFT_LIMIT_ENABLE || defined __DOXYGEN__
-#define DEFAULT_SOFT_LIMIT_ENABLE Off
+#define DEFAULT_SOFT_LIMIT_ENABLE On
 #endif
 ///@}
 
@@ -1045,7 +1045,7 @@ simply message the user to check the limits and enter an alarm state, rather tha
 not throw an alarm message.
 */
 #if !defined DEFAULT_HARD_LIMIT_ENABLE || defined __DOXYGEN__
-#define DEFAULT_HARD_LIMIT_ENABLE Off
+#define DEFAULT_HARD_LIMIT_ENABLE On
 #endif
 #if !defined DEFAULT_CHECK_LIMITS_AT_INIT || defined __DOXYGEN__
 #define DEFAULT_CHECK_LIMITS_AT_INIT Off
@@ -1099,7 +1099,7 @@ Useful for some pre-built electronic boards.
 */
 ///@{
 #if !defined DEFAULT_INVERT_COOLANT_FLOOD_PIN || defined __DOXYGEN__
-#define DEFAULT_INVERT_COOLANT_FLOOD_PIN Off
+#define DEFAULT_INVERT_COOLANT_FLOOD_PIN On
 #endif
 #if !defined DEFAULT_INVERT_COOLANT_MIST_PIN || defined __DOXYGEN__
 #define DEFAULT_INVERT_COOLANT_MIST_PIN Off  // NOTE: not supported by all drivers.
@@ -1138,7 +1138,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 #define DEFAULT_INVERT_SPINDLE_ENABLE_PIN Off
 #endif
 #if !defined DEFAULT_INVERT_SPINDLE_CCW_PIN || defined __DOXYGEN__
-#define DEFAULT_INVERT_SPINDLE_CCW_PIN Off // NOTE: not supported by all drivers.
+#define DEFAULT_INVERT_SPINDLE_CCW_PIN On // NOTE: not supported by all drivers.
 #endif
 #if !defined DEFAULT_INVERT_SPINDLE_PWM_PIN || defined __DOXYGEN__
 #define DEFAULT_INVERT_SPINDLE_PWM_PIN Off // NOTE: not supported by all drivers.
@@ -1149,7 +1149,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MAX || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MAX 1000.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MAX 12000.0f // rpm
 #endif
 ///@}
 
@@ -1157,7 +1157,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MIN || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MIN 0.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MIN 1000.0f // rpm
 #endif
 ///@}
 
@@ -1486,7 +1486,7 @@ Requires homing cycles to be defined by \ref DEFAULT_HOMING_CYCLE_0 - \ref DEFAU
 \internal Bit 0 in settings.homing.flags.
 */
 #if !defined DEFAULT_HOMING_ENABLE || defined __DOXYGEN__
-#define DEFAULT_HOMING_ENABLE Off // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_HOMING_ENABLE On // Default disabled. Set to \ref On or 1 to enable.
 #endif
 
 /*! /def DEFAULT_HOMING_SINGLE_AXIS_COMMANDS
@@ -1519,7 +1519,7 @@ define to \ref On or 1 to force grblHAL to always set the machine origin at the 
 \internal Bit 3 in settings.homing.flags.
 */
 #if !defined DEFAULT_HOMING_FORCE_SET_ORIGIN || defined __DOXYGEN__
-#define DEFAULT_HOMING_FORCE_SET_ORIGIN Off // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_HOMING_FORCE_SET_ORIGIN On // Default disabled. Set to \ref On or 1 to enable.
 #endif
 
 /*! \def DEFAULT_LIMITS_TWO_SWITCHES_ON_AXES
@@ -1714,7 +1714,7 @@ are used the logic of the input signals should be be inverted with the \ref axis
 */
 ///@{
 #if !defined DEFAULT_HOME_SIGNALS_INVERT_MASK || defined __DOXYGEN__
-#define DEFAULT_HOME_SIGNALS_INVERT_MASK 0 // Set to -1 or AXES_BITMASK to invert for all axes
+#define DEFAULT_HOME_SIGNALS_INVERT_MASK AXES_BITMASK // Set to -1 or AXES_BITMASK to invert for all axes
 #endif
 ///@}
 
@@ -1725,7 +1725,7 @@ are used the logic of the input signals should be be inverted with the \ref axis
 */
 ///@{
 #if !defined DEFAULT_PROBE_SIGNAL_INVERT || defined __DOXYGEN__
-#define DEFAULT_PROBE_SIGNAL_INVERT Off
+#define DEFAULT_PROBE_SIGNAL_INVERT On
 #endif
 #if !defined DEFAULT_TOOLSETTER_SIGNAL_INVERT || defined __DOXYGEN__
 #define DEFAULT_TOOLSETTER_SIGNAL_INVERT Off
@@ -2117,7 +2117,7 @@ Number of LEDs in NeoPixel/WS2812 strip 1.
 */
 ///@{
 #if !defined DEFAULT_RGB_STRIP0_LENGTH || defined __DOXYGEN__
-#define DEFAULT_RGB_STRIP0_LENGTH 0
+#define DEFAULT_RGB_STRIP0_LENGTH 8
 #endif
 ///@}
 
@@ -2177,7 +2177,7 @@ Filing systems options.
 \internal Bit 0 in settings.fs_options.mask.
 */
 #if !defined DEFAULT_FS_SD_AUTOMOUNT || defined __DOXYGEN__
-#define DEFAULT_FS_SD_AUTOMOUNT Off // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_FS_SD_AUTOMOUNT On // Default disabled. Set to \ref On or 1 to enable.
 #endif
 
 /*! /def DEFAULT_FS_LITLLEFS_HIDDEN
@@ -2194,7 +2194,7 @@ Adds directory entries in $F and $F+ output to allow hierarchical navigation of 
 \internal Bit 2 in settings.fs_options.mask.
 */
 #if !defined DEFAULT_FS_HIERACHICAL_LISTING || defined __DOXYGEN__
-#define DEFAULT_FS_HIERACHICAL_LISTING Off // Default disabled. Set to \ref On or 1 to enable.
+#define DEFAULT_FS_HIERACHICAL_LISTING On // Default disabled. Set to \ref On or 1 to enable.
 #endif
 ///@}
 
@@ -2206,13 +2206,13 @@ Adds directory entries in $F and $F+ output to allow hierarchical navigation of 
  */
 ///@{
 #if !defined DEFAULT_X_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_X_STEPS_PER_MM 250.0f
+#define DEFAULT_X_STEPS_PER_MM 1600.0f
 #endif
 #if !defined DEFAULT_Y_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_Y_STEPS_PER_MM 250.0f
+#define DEFAULT_Y_STEPS_PER_MM 1600.0f
 #endif
 #if !defined DEFAULT_Z_STEPS_PER_MM || defined __DOXYGEN__
-#define DEFAULT_Z_STEPS_PER_MM 250.0f
+#define DEFAULT_Z_STEPS_PER_MM 1600.0f
 #endif
 #if (defined A_AXIS && !defined DEFAULT_A_STEPS_PER_MM) || defined __DOXYGEN__
 #define DEFAULT_A_STEPS_PER_MM 250.0f
@@ -2239,13 +2239,13 @@ Adds directory entries in $F and $F+ output to allow hierarchical navigation of 
 */
 ///@{
 #if !defined DEFAULT_X_MAX_RATE || defined __DOXYGEN__
-#define DEFAULT_X_MAX_RATE 500.0f // mm/min
+#define DEFAULT_X_MAX_RATE 1000.0f // mm/min
 #endif
 #if !defined DEFAULT_Y_MAX_RATE || defined __DOXYGEN__
-#define DEFAULT_Y_MAX_RATE 500.0f // mm/min
+#define DEFAULT_Y_MAX_RATE 1000.0f // mm/min
 #endif
 #if !defined DEFAULT_Z_MAX_RATE || defined __DOXYGEN__
-#define DEFAULT_Z_MAX_RATE 500.0f // mm/min
+#define DEFAULT_Z_MAX_RATE 1000.0f // mm/min
 #endif
 #if (defined A_AXIS && !defined DEFAULT_A_MAX_RATE) || defined __DOXYGEN__
 #define DEFAULT_A_MAX_RATE 500.0f // mm/min
@@ -2336,13 +2336,13 @@ __NOTE:__ Must be a positive values.
 */
 ///@{
 #if !defined DEFAULT_X_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_X_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_X_MAX_TRAVEL 234.0f // mm
 #endif
 #if !defined DEFAULT_Y_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_Y_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_Y_MAX_TRAVEL 196.0f // mm
 #endif
 #if !defined DEFAULT_Z_MAX_TRAVEL || defined __DOXYGEN__
-#define DEFAULT_Z_MAX_TRAVEL 200.0f // mm
+#define DEFAULT_Z_MAX_TRAVEL 72.0f // mm
 #endif
 #if (defined A_AXIS && !defined DEFAULT_A_MAX_TRAVEL) || defined __DOXYGEN__
 #define DEFAULT_A_MAX_TRAVEL 200.0f // mm
