@@ -106,7 +106,7 @@ folder of the repo. See file comments on how to gather spindle data and run the 
 generate a solution.
 */
 #if !defined ENABLE_SPINDLE_LINEARIZATION || defined __DOXYGEN__
-#define ENABLE_SPINDLE_LINEARIZATION 0  // Set to 1 to enable spindle RPM linearization. Requires compatible driver if enabled.
+#define ENABLE_SPINDLE_LINEARIZATION 1  // Set to 1 to enable spindle RPM linearization. Requires compatible driver if enabled.
 #endif
 
 /*! \def SPINDLE_NPWM_PIECES
@@ -1149,7 +1149,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MAX || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MAX 12000.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MAX 12558.1f // rpm
 #endif
 ///@}
 
@@ -1157,7 +1157,7 @@ Inverts the selected spindle output signals from active high to active low. Usef
 */
 ///@{
 #if !defined DEFAULT_SPINDLE_RPM_MIN || defined __DOXYGEN__
-#define DEFAULT_SPINDLE_RPM_MIN 1000.0f // rpm
+#define DEFAULT_SPINDLE_RPM_MIN 333.8f // rpm
 #endif
 ///@}
 
@@ -1276,13 +1276,13 @@ Defines the parameters for the first entry in the spindle RPM linearization tabl
 */
 ///@{
 #if !defined DEFAULT_RPM_POINT01 || defined __DOXYGEN__
-#define DEFAULT_RPM_POINT01 NAN // DEFAULT_SPINDLE_RPM_MIN  // Replace NAN with DEFAULT_SPINDLE_RPM_MIN to enable.
+#define DEFAULT_RPM_POINT01 333.8f  // Replace NAN with DEFAULT_SPINDLE_RPM_MIN to enable.
 #endif
 #if !defined DEFAULT_RPM_LINE_A1 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_A1 3.197101e-03f
+#define DEFAULT_RPM_LINE_A1 1.242039e+00f
 #endif
 #if !defined DEFAULT_RPM_LINE_B1 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_B1 -3.526076e-1f
+#define DEFAULT_RPM_LINE_B1 -1.585388e+03f
 #endif
 ///@}
 
@@ -1291,13 +1291,13 @@ Defines the parameters for the second entry in the spindle RPM linearization tab
 */
 ///@{
 #if !defined DEFAULT_RPM_POINT12 || defined __DOXYGEN__
-#define DEFAULT_RPM_POINT12 NAN  // Change NAN to a float constant to enable.
+#define DEFAULT_RPM_POINT12 1541.5f  // Change NAN to a float constant to enable.
 #endif
 #if !defined DEFAULT_RPM_LINE_A2 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_A2  1.722950e-2f
+#define DEFAULT_RPM_LINE_A2 5.716344e-01f
 #endif
 #if !defined DEFAULT_RPM_LINE_B2 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_B2  1.0f,
+#define DEFAULT_RPM_LINE_B2 -2.618821e+03f
 #endif
 ///@}
 
@@ -1306,13 +1306,13 @@ Defines the parameters for the third entry in the spindle RPM linearization tabl
 */
 ///@{
 #if !defined DEFAULT_RPM_POINT23 || defined __DOXYGEN__
-#define DEFAULT_RPM_POINT23 NAN  // Change NAN to a float constant to enable.
+#define DEFAULT_RPM_POINT23 6789.6f  // Change NAN to a float constant to enable.
 #endif
 #if !defined DEFAULT_RPM_LINE_A3 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_A3 5.901518e-02f
+#define DEFAULT_RPM_LINE_A3 7.277789e-01f
 #endif
 #if !defined DEFAULT_RPM_LINE_B3 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_B3 4.881851e+02f
+#define DEFAULT_RPM_LINE_B3 -1.558660e+03f
 #endif
 ///@}
 
@@ -1321,13 +1321,13 @@ Defines the parameters for the fourth entry in the spindle RPM linearization tab
 */
 ///@{
 #if !defined DEFAULT_RPM_POINT34 || defined __DOXYGEN__
-#define DEFAULT_RPM_POINT34 NAN  // Change NAN to a float constant to enable.
+#define DEFAULT_RPM_POINT34 10911.7f  // Change NAN to a float constant to enable.
 #endif
 #if !defined DEFAULT_RPM_LINE_A4 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_A4  1.203413e-01f
+#define DEFAULT_RPM_LINE_A4 1.518525e+00f
 #endif
 #if !defined DEFAULT_RPM_LINE_B4 || defined __DOXYGEN__
-#define DEFAULT_RPM_LINE_B4  1.151360e+03f
+#define DEFAULT_RPM_LINE_B4 7.069762e+03f
 #endif
 ///@}
 
@@ -1946,7 +1946,7 @@ is positive voltage for motions in negative direction.
 Set this value to -1 or AXES_BITMASK to invert for all steppers or specify which by mask.*/
 ///@{
 #if !defined DEFAULT_DIR_SIGNALS_INVERT_MASK || defined __DOXYGEN__
-#define DEFAULT_DIR_SIGNALS_INVERT_MASK 0
+#define DEFAULT_DIR_SIGNALS_INVERT_MASK 2
 #endif
 ///@}
 
